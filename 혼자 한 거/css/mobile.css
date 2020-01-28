@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+/* quick-menu & quick-event =============================================== */
+.quick-menu{
+    display: none;
+}
+.quick-event{
+    right: 20px;
+    bottom: 20px;
+    left: initial;
+    top: initial;
+}
+.scroll .quick-event{
+    top: initial
+}
+
+
+.main-beanist{
+    height: 440px;
+    background: url(../img/main_beanist_bg_m.gif) center bottom no-repeat #052e6b;
+}
+.main-beanist .container{
+    top: 40px;
+    left: 10px;
+    transform: none;
+}
+.main-beanist .container h2 {
+    display: inline-block;
+    position: relative;
+    left: 40px;
+    padding-bottom: 20px;
+}
+.main-beanist .container img{
+    display: block;
+    padding-bottom: 0px;
+    width: 130px;
+}
+.main-beanist .text-box {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 10%;
+    font-size: 16px;
+}

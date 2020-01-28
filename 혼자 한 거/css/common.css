@@ -1,0 +1,243 @@
+@charset "UTF-8";
+/* 폰트 불러오기 */
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css); 
+/* 폰트 Weight ExL 100, L 300, R 400, M 500, B 700, H 900 */
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900');
+/* 폰트 Weight ExL 200, L 300, R 400, SeB 600, B 700, ExB 800, BK 900 */
+
+/* reset, common ============================================================ */
+*{margin: 0; padding: 0;}
+body{
+   font-family: 'Noto Sans KR', Dotum, sans-serif;
+   font-size: 13px;
+}
+a{color:#000; text-decoration: none;}
+li{list-style: none;}
+em{font-style: normal;}
+button{border: none; outline: none; background: none; cursor: pointer;}
+.blind{position: absolute; left: -9999px; font-size: 0;}
+.container{max-width: 1180px; margin: auto;}
+.row::after{content: ''; display: block; overflow: hidden; clear: both;}
+
+
+/* sprites & icon ====================================================== */
+.material-icon{font-size: 32px;}
+.sp{display: inline-block; background: url(../img/sprite.png) no-repeat;}
+.sp-blog{width: 22px; height: 22px; background-position: 0 0;}
+.sp-instagram{width: 22px; height: 22px; background-position: -22px 0;}
+.sp-facebook{width: 22px; height: 22px; background-position: -44px 0;}
+.sp-quick-menu1{width: 105px; height: 100px; background-position: 0 -100px;}
+.sp-quick-menu2{width: 105px; height: 100px; background-position: -120px -100px;}
+.sp-quick-menu3{width: 105px; height: 100px; background-position: -240px -100px;}
+.sp-quick-menu4{width: 105px; height: 100px; background-position: -360px -100px;}
+.sp-culture-icon1{width: 105px; height: 105px; background-position: 0 -300px;}
+.sp-culture-icon2{width: 105px; height: 105px; background-position: -120px -300px;}
+.sp-culture-icon3{width: 105px; height: 105px; background-position: -240px -300px;}
+
+/* 내가 한 파일 */
+/* header ====================================================== */
+header{
+    position: fixed;
+    width: 100%;
+    height: 130px;
+    background: #fff;
+
+}
+header .container{
+    height: 130px;
+    background: #fff;
+    position: relative;
+}
+header h1{
+    position: absolute;
+    bottom: 23px;
+}
+header .site{
+    position: absolute;
+    top: 22px;
+}
+header .site li{
+    display: inline-block;
+    padding: 0 15px;
+    background: url(../img/util_line.gif) no-repeat right;
+    
+}
+header .site li:last-child{
+    background: none;
+}
+header .site li a{color: #848484;}
+header .site li.on a{
+    font-weight: bold;
+    color: #052e6b;
+}
+
+#btn-menu{display: none;}
+
+
+/* util(members / sns / language) */
+header nav{
+    position: relative;
+    height: 100%;
+    font-size: 14px;
+}
+header nav .util{
+    position: absolute;
+    top: 0;
+    right: 20px; 
+    width: 500px;
+    height: 100%;
+}
+
+header nav .util .members{
+    position: absolute;
+    right: 252px;
+    top: 20px;
+}
+header nav .util .members li{
+    display: inline-block;
+    padding: 0 16px;
+    background: url(../img/util_line.gif) no-repeat right;
+    
+}
+header nav .util .members li:first-child{}
+header nav .util .members li:last-child{
+    background: none;
+}
+header nav .util .members li a{
+    color: #848484;
+    font-size: 13px;
+}
+header nav .util .sns{
+    position: absolute;
+    top: 20px;
+    right: 170px;
+}
+header nav .util .sns li{
+    float: left;
+    padding-left: 5px;
+}
+header nav .util .language{
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
+header nav .util .language > a{
+    display: inline-block;
+    border: 1px solid lightgray;
+    width: 100px;
+    line-height: 25px;
+    padding-left: 10px;
+}
+header nav .util .language ul{
+    
+}
+header nav .util .language ul li{
+    padding: 5px 5px 5px 10px;
+}
+header nav .util .language ul li a{
+    color: #848484;
+}
+
+
+/* gnb */
+/* 1depth */
+header nav .gnb{
+    position: absolute;
+    right: 116px;
+    top: 76px;
+}
+header nav .gnb > li{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 18px;
+    padding: 0 38px;
+}
+header nav .gnb > li > a{
+    display: inline-block;
+    padding-bottom: 23px;
+}
+header nav .gnb > li > a > span{
+}
+header nav .gnb > li > a > span::after{}
+header nav .gnb > li:hover > a > span::after{}
+header nav .gnb > li  a i{display: none;}
+
+/* 2depth */
+header nav .gnb .sub{
+    /* display: none; */
+    position: absolute;
+    
+}
+header nav .gnb:hover .sub{}
+header nav .gnb-bg{}
+header nav .gnb:hover + .gnb-bg{}
+header nav .gnb .sub li{
+    padding-bottom: 10px;
+    font-size: 13px;
+}
+header nav .gnb .sub li a{}
+header nav .gnb .sub li a:hover{}
+
+.find-store,
+.language-m{
+    display: none;
+} /* 모바일용이라서 */
+
+/* quick-menu & quick-event =============================================== */
+.quick-menu{
+    /* display: inline-block; */
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+ }
+ .quick-menu li{
+    padding: 3px 0;
+ }
+ .quick-menu li a{}
+ 
+ .quick-event{
+    display: inline-block;
+    position: fixed;
+    left: 150px;
+    top: 170px;
+ }
+ .quick-event button{
+    /* display: none; */
+    position: absolute;
+    top: 0;
+ }
+ 
+ .scroll .quick-event{}
+ 
+ /* section =============================================== */
+ section{height: 3000px;}
+ 
+ 
+ 
+ .main-beanist{
+    height: 440px;
+    background: url(../img/main_beanist_bg_m.gif) center bottom no-repeat #052e6b;
+}
+.main-beanist .container{
+    top: 40px;
+    left: 10px;
+    transform: none;
+}
+.main-beanist .container h2 {
+    display: inline-block;
+    position: relative;
+    left: 40px;
+    padding-bottom: 20px;
+}
+.main-beanist .container img{
+    display: block;
+    padding-bottom: 0px;
+    width: 130px;
+}
+.main-beanist .text-box {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 10%;
+    font-size: 16px;
+}
